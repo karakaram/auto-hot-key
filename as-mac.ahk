@@ -3,7 +3,7 @@
 ; isCtrlKeyWindow() 関数を変更することで、
 ; アプリケーションに応じて Mac 風キーバインドを無効にすることができる
 ;
-; AutoHotkey: v1.1.22.04
+; AutoHotkey: v1.1.22.07
 ; Require:    alt-ime-ahk.ahk   https://github.com/karakaram/alt-ime-ahk
 ; Author:     karakaram   http://www.karakaram.com
 
