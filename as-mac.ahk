@@ -42,27 +42,31 @@
 ;----------------------------------------------------------------
 isCtrlKeyWindow()
 {
-    ; Window タイトルのマッチを部分一致にする
-    SetTitleMatchMode, 2
-
     ; GVim
-    IfWinActive,GVIM
+    IfWinActive,ahk_class Vim
     {
-        Return 1
+        return 1
     }
     ; Poderosa
-    IfWinActive,Poderosa
+    IfWinActive,ahk_class WindowsForms10.Window.8.app.0.20f9772
     {
-        Return 1
+        return 1
     }
-    ; MINGW
-    IfWinActive,MINGW
+    ; Mingw
+    IfWinActive,ahk_class ConsoleWindowClass
     {
-        Return 1
+        return 1
     }
-
-    ; Window タイトルのマッチを前方一致一致に戻す
-    SetTitleMatchMode, 1
+    ; Tera Term
+    IfWinActive,ahk_class VTWin32
+    {
+        return 1
+    }
+    ; Sygwin
+    IfWinActive,ahk_class mintty
+    {
+        return 1
+    }
 
     Return 0
 }
